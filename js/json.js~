@@ -1,0 +1,60 @@
+ $(document).ready(function(){
+	function httpGet(url) {
+		return new Promise(function(resolve, reject) {
+			var xhr = new XMLHttpRequest();
+    			xhr.open('GET', url, true);
+
+    			xhr.onload = function() {
+      				if (this.status == 200) {
+        				resolve(xhr.responseText);
+      				} else {
+        				var error = new Error(this.statusText);
+        				error.code = this.status;
+        				reject(error);
+      				}
+    			};
+
+    			xhr.onerror = function() {
+      				reject(new Error("Network Error"));
+    			};
+
+    			xhr.send();
+  		});
+
+	}
+
+		httpGet("./js/shopia-footer.json").then( function f7(result) {
+  			var data = JSON.parse(result); 
+			document.getElementById("shops").innerHTML=data["shops"];
+          		document.getElementById("subscribe").innerHTML=data["subscribe"];
+         		document.getElementById("shopia_fashion_store").innerHTML=data["shopia_fashion_store"];
+  			return 'f7';
+		});
+
+		httpGet("./js/preload_and_other.json").then( function f7(result) {
+  			var data = JSON.parse(result); 
+			document.getElementById("please_message").innerHTML=data["please_message"];
+			document.getElementById("box_4").innerHTML=data["box_4"];
+			document.getElementById("label_user").innerHTML=data["label_user"];
+			document.getElementById("label_mail").innerHTML=data["label_mail"];
+			document.getElementById("label_subject").innerHTML=data["label_subject"];
+			document.getElementById("select_message").innerHTML=data["select_message"];
+			document.getElementById("select_error").innerHTML=data["select_error"];
+			document.getElementById("select_wish").innerHTML=data["select_wish"];
+			document.getElementById("select_please").innerHTML=data["select_please"];
+			document.getElementById("hello").innerHTML=data["hello"];
+			document.getElementById("label_message").innerHTML=data["label_message"];
+			document.getElementById("mymagicoverbox_pop_id").innerHTML=data["mymagicoverbox_pop_id"];
+			document.getElementById("mymagicoverbox_fermer_id").innerHTML=data["mymagicoverbox_fermer_id"];
+  			return 'f7';
+		});
+
+
+
+
+
+
+
+
+
+});

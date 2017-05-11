@@ -1,0 +1,16 @@
+{	
+	"please_message":"Please wait!",
+	"box_4":"Feedback!",
+	"label_user":"Username:",
+	"label_mail":"E-mail:",
+	"label_subject":"Letter subject:",
+	"select_message":"- select message subject -",
+	"select_error":"Error!",
+	"select_wish":"Wishes!",
+	"select_please":"Help, please :)",
+	"hello":"I want to communicate...",
+	"label_message":"Message:",
+	"mymagicoverbox_pop_id":"Send!",
+	"mymagicoverbox_fermer_id":"Close!",
+	"homess": "homes"
+}

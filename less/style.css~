@@ -1,0 +1,1190 @@
+@font-face {
+    font-family: "LatoRegular";
+    src: url("../fonts/LatoRegular.eot");
+    src: url("../fonts/LatoRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/LatoRegular.woff") format("woff"),
+    url("../fonts/LatoRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "playfairdisplayitalic";
+    src: url("../fonts/playfairdisplayitalic.ttf");
+    src: url("../fonts/playfairdisplayitalic.ttf?#iefix")format("embedded-opentype"),
+    url("../fonts/playfairdisplayitalic.woff") format("woff"),
+    url("../fonts/playfairdisplayitalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "playfairdisplaybolditalic";
+    src: url("../fonts/playfairdisplaybolditalic.ttf");
+    src: url("../fonts/playfairdisplaybolditalic.ttf?#iefix")format("embedded-opentype"),
+    url("../fonts/playfairdisplaybolditalic.woff") format("woff"),
+    url("../fonts/playfairdisplaybolditalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.shopia-header{
+	margin: 0 auto;
+   background-color: rgb(242,242,242);
+   background-size: cover;
+   height: 32px;
+   width: 1240px;
+}
+
+.shopia-header-content{
+	display: inline-block;
+	width: 1104px;
+	height: 32px;
+	margin-left: 68px;
+	margin-right:68px;
+}
+
+.shopia-header-img{
+	float: left;
+	clear: left;
+	margin-top: 0;
+	margin-right: 11px;
+	margin-bottom: 12px;
+	margin-top:12px;
+}
+
+.shopia-header-content-call{
+	float: left;
+	margin-left: 0;
+	margin-bottom: 11px;
+	margin-top:11px;
+	color: black;
+	font-family: 'LatoRegular', sans-serif;
+	font-size: 10px;
+		 
+}
+
+.shopia-header-content-welcome
+{
+	float: right;
+	height: 32px;
+}
+
+.shopia-header-content-welcome-a{
+	display: inline-block;
+	margin-top: 0;
+	font-family: 'LatoRegular', sans-serif;
+	font-size: 10px;
+	margin-bottom: 11px;
+	margin-top:11px;
+	
+}
+
+.shopia-header-content-welcome-simbol{
+	display: inline-block;
+	margin-left: 20px;
+	margin-right: 20px;
+	font-family: 'LatoRegular', sans-serif;
+	font-size: 11px;
+}
+
+/*
+ * ---------------------Section one ---------------------------------
+ */
+
+.shopia-section-one{
+	margin: 0 auto;
+   background-color: rgb(255,255,255);
+   background-size: cover;
+   height: 106px;
+   width: 1240px;
+}
+
+.shopia-section-one-contenet{
+	display: inline-block;
+	width: 1104px;
+	height: 106px;
+   margin-left: 68px;
+	margin-right:68px;
+}
+
+.shopia-section-one-content-home{
+	float: left;
+	clear: left;
+	height: 106px;
+}
+
+.shopia-section-one-content-home-a{
+	display: inline-block;
+	margin-top: 0;
+	font-family: 'playfairdisplayitalic', sans-serif;
+	font-size: 15px;
+	margin-bottom: 55px;
+	margin-top: 37px;
+	margin-right: 20px;
+}
+
+.shopia-section-one-content-home-a:last-child{
+	margin-right: 0;
+}
+
+.shopia-section-one-content-img_main{
+	float: left;
+	margin-top: 24px;
+	margin-bottom: 20px;
+	margin-left: 200px;
+	width: 196px;
+	height: 63px;
+}
+
+.shopia-section-one-content-img_instag{
+	margin: 6px 5.5px;
+}
+
+.shopia-section-one-content-img_face{
+	margin: 4.5px 8px;
+}
+
+.shopia-section-one-content-img_twit,
+.shopia-section-one-content-img_what{
+	margin: 5px 5px;
+}
+
+.shopia-section-one-content-img_ellipse {
+  float: right;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb( 217, 191, 143 );
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin-top: 35px;
+  margin-bottom: 47px;
+  margin-right: 11px;
+}
+
+.shopia-section-one-content-form_currency{
+	float: right;
+	margin-top: 35px;
+   margin-bottom: 44px;
+   margin-left: 32px;
+   height: 27px;
+   width: 72px;
+   font-size: 10px;
+   font-weight: bold;
+   border-color: rgb( 0, 0, 0 );
+   padding-left: 3px;
+   background: rgb(0,0,0);
+	color: rgb(255,255,255);
+   cursor: pointer;
+   outline: 0;
+   border-style: solid; 
+   border-bottom-style: solid;  
+   -webkit-appearance: none; /*убираем галочку в webkit-браузерах*/
+   -moz-appearance: none; /*убираем галочку в Mozilla Firefox*/
+}
+
+/*
+ * ---------------------Section two ---------------------------------
+ */
+ .shopia-section-two{
+ 	margin: 0 auto;
+ 	height: 580px;
+   width: 1240px;
+   background-image: url(../img/girls.jpg);
+   background-repeat: no-repeat;
+   background-size: 1240px 580px;
+ 
+}
+
+.shopia-section-two-content{
+	display: block;
+	height: 580px;
+   width: 228px;
+   margin-left: 510px;
+}
+
+.shopia-section-two-content-rectangle_one{
+	display: inline-block;
+	height: 228px;
+   width: 228px;
+  	border-style: solid; 	
+  	border-width: 2px;
+  	border-color: rgb( 255, 255, 255 );
+  	margin-top: 122px;
+}
+
+.shopia-section-two-content-rectangle_two{
+	display: inline-block;
+	margin-top: 4px;
+	margin-left: 4px;
+	height: 219px;
+   width: 219px;
+   border-style: solid; 	
+  	border-width: 1px;
+  	border-color: rgb( 255, 255, 255 );
+}
+
+.shopia-section-two-content-rectangle-mid{
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  color: rgb( 255, 255, 255 );
+  font-weight: bold;
+  width: 108px;
+  margin-top: 22px;
+  margin-left: 61px;
+
+}
+
+.shopia-section-two-content-rectangle-sale {
+  font-size: 44px;
+  font-family: "Lato", sans-serif;
+  color: rgb( 0, 0, 0 );
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 57px;
+  width: 125px;
+}
+
+.shopia-section-two-content-rectangle-up_to{
+	margin: 0 auto;
+ 	height: 17px;
+   width: 176px;
+   margin-top: 9px;
+}
+
+.shopia-section-two-content-rectangle-up_to-rectangle_left{
+	display: inline-block;
+	height: 17px;
+	width: 52px;
+	margin-left: 4px;
+}
+
+.shopia-section-two-content-rectangle-up_to-rectangle_left-one{
+  float: right;
+  background-color: rgb( 205, 205, 205 );
+  width: 29px;
+  height: 1px;
+  margin-left: 22px;
+  margin-top: 9px;
+}
+
+.shopia-section-two-content-rectangle-up_to-rectangle_left-two{
+	float: right;
+   background-color: rgb( 255, 255, 255 );
+	width: 52px;
+   height: 1px;
+   margin-left: 47px;
+   margin-top: 5px;
+}
+ 
+.shopia-section-two-content-rectangle-up_to-text{
+	display: inline-block;
+   font-family: "Lato", sans-serif;
+   font-size: 15px;
+   color: rgb( 255, 255, 255 );
+   font-weight: bold;
+   margin-left: 4px;
+}
+
+.shopia-section-two-content-rectangle-up_to-rectangle-right{
+  	display: inline-block;
+	height: 17px;
+	width: 52px;
+	margin-left: 4px;
+}
+
+.shopia-section-two-content-rectangle-up_to-rectangle-right-one{
+  float: left;
+  background-color: rgb( 205, 205, 205 );
+  width: 29px;
+  height: 1px;
+  margin-top: 9px;
+}
+
+.shopia-section-two-content-rectangle-up_to-rectangle-right-two{
+	float: left;
+   background-color: rgb( 255, 255, 255 );
+	width: 52px;
+   height: 1px;
+   margin-top: 5px;
+}
+
+.shopia-section-two-content-rectangle-off{
+  font-size: 23px;
+  font-family: "Lato", sans-serif;
+  color: rgb( 0, 0, 0 );
+  font-weight: bold;
+  margin-top: 26px;
+  margin-left: 57px;
+  width: 129px;
+}
+
+.shopia-section-two-content-shop_now{
+	display: inline-block;
+	height: 42px;
+   width: 164px;
+  	margin-left: 30px;
+  	margin-top: 42px;
+   background-color: rgb( 240, 157, 102 );
+   transition: .5s;
+}
+
+.shopia-section-two-content-shop_now,
+.shopia-section-two-content-shop_now{
+  background-color: rgb( 100, 150, 80 );
+  transition: .5s;
+}
+
+.shopia-section-two-content-shop_now-text{
+	font-size: 19px;
+   font-family: "Lato", sans-serif;
+   font-weight: bold;
+   color: rgb( 255, 255, 255 );
+   margin-left: 26px;
+   margin-top: 11px;
+}
+
+.shopia-section-two-content-rhomb{
+	display: inline-block;
+	height: 13px;
+   width: 100px;
+  	margin-left: 63px;
+  	margin-top: 100px;
+}
+
+.shopia-section-one-content-rhomb-image{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin-right: 2px;
+}
+
+.shopia-section-one-content-rhomb-image:last-child{
+	margin-right: 0;
+}
+
+
+/*
+ * ---------------------Section three ---------------------------------
+*/
+
+.shopia-section-three{
+	margin: 0 auto;
+   background-color: rgb(255,255,255);
+   background-size: cover;
+   height: 80px;
+   width: 1240px;
+}
+.shopia-section-three-content{
+	display: inline-block;
+	width: 1126px;
+	height: 80px;
+	margin-left: 68px;
+	margin-right:46px;
+	margin-top: 57px;
+}
+.shopia-section-three-content-free{
+	display: inline-block;
+	position: relative;
+ 	height: 80px;
+   width: 372px;
+   background-image: url(../img/arrow_left.png);
+   background-repeat: no-repeat;
+   background-size: 372px 80px;
+   z-index: 1;
+}
+
+.shopia-section-three-content-free-img_air{
+	display: inline-block;
+	margin-top: 21px;
+	margin-left: 24px;
+	margin-right: 17px;
+	width: 38px;
+	height: 38px;
+}
+
+.shopia-section-three-content-free-text{
+	display: inline-block;
+}
+
+.shopia-section-three-content-free-text-text_up{
+	display: block;
+  font-size: 23px;
+  font-family: "Lato", sans-serif;
+  color: rgb( 255, 255, 255 );
+  font-weight: bold;
+}
+
+.shopia-section-three-content-free-text-text_down{
+  display:block;
+  font-size: 11px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  color: rgb( 255, 255, 255 );
+ 
+}
+.shopia-section-three-content-30_days{
+	display: inline-block;
+	position: relative;
+	right: 11px;
+ 	height: 80px;
+   width: 372px;
+   background-image: url(../img/arrow_center.png);
+   background-repeat: no-repeat;
+   background-size: 372px 80px;
+   z-index: 2;
+}
+.shopia-section-three-content-30_days-img_clock{
+	display: inline-block;
+	margin-top: 21px;
+	margin-left: 60px;
+	margin-right: 17px;
+	width: 38px;
+	height: 38px;
+	}
+.shopia-section-three-content-30_days-text{
+	display: inline-block;
+	top: 5px;
+}
+.shopia-section-three-content-30_days-text-text_up{
+  display: block;
+  font-size: 23px;
+  font-family: "Lato", sans-serif;
+  color: rgb( 255, 255, 255 );
+  font-weight: bold;
+}
+
+.shopia-section-three-content-30_days-text-text_down{
+  display:block;
+  font-size: 11px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  color: rgb( 255, 255, 255 );
+}
+
+.shopia-section-three-content-support{
+	display: inline-block;
+	position: relative;
+	right: 26px;
+ 	height: 80px;
+   width: 372px;
+   background-image: url(../img/arrow_right.png);
+   background-repeat: no-repeat;
+   background-size: 372px 80px;
+   z-index: 3;
+}
+
+.shopia-section-three-content-support-img_beach{
+	display: inline-block;
+	margin-top: 21px;
+	margin-left: 60px;
+	margin-right: 17px;
+	width: 38px;
+	height: 38px;
+}
+.shopia-section-three-content-support-text{
+	display: inline-block;
+}
+
+.shopia-section-three-content-support-text-text_up{
+  display: block;
+  font-size: 23px;
+  font-family: "Lato", sans-serif;
+  color: rgb( 255, 255, 255 );
+  font-weight: bold;
+}
+
+.shopia-section-three-content-support-text-text_down{
+  display:block;
+  font-size: 11px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  color: rgb( 255, 255, 255 );
+}
+
+/*
+ * ---------------------Section four ---------------------------------
+*/ 		
+
+.shopia-section-four{
+	margin: 0 auto;
+   background-color: rgb(255,255,255);
+   background-size: cover;
+   height: 756px;
+   width: 1240px;
+} 
+
+.shopia-section-four-content{
+	display: block;
+	height: 756px;
+   width: 1104px;
+   margin-left: 68px;
+	margin-right:68px;
+	margin-top: 175px;
+}
+
+.shopia-section-four-content-title_container{
+	display: inline-block;
+	width: 1104px;
+	height: 15px;
+}
+
+.shopia-section-four-content-rectangle_left{ 
+	display: inline-block;
+	background-color: rgb( 234, 234, 234 );
+   width: 345px;
+   height: 2px;
+   margin-bottom: 7px;
+   margin-right: 47px;
+}
+
+.shopia-section-four-content-title{
+	display: inline-block;
+	height: 22px;
+	width: 307px;
+	
+}
+
+.shopia-section-four-content-title-rhomb_left{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+}
+
+.shopia-section-four-content-title-text{
+	display: inline-block;
+	height: 18px;
+	font-family: 'playfairdisplaybolditalic', sans-serif;
+	font-size: 23px;
+	margin-left: 66px;
+	margin-right: 66px;
+}
+
+.shopia-section-four-content-rectangle_right{ 
+	display: inline-block;
+	background-color: rgb( 234, 234, 234 );
+   width: 345px;
+   height: 2px;
+   margin-bottom: 7px;
+   margin-left: 47px;
+}
+
+.shopia-section-four-content-image{
+	display: block;
+	height: 680px;
+   width: 1240px;
+	margin-top: 57px;
+}
+
+
+
+/*-----------------------------------------------------------------*/
+.shopia-section-four-content-image-boundary{
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb( 255, 255, 255 );
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 310px;
+  height: 336px
+}
+/*-----------------------------------------------------------------*/
+
+.shopia-section-four-content-image-left{
+	display: inline-block;
+ 	height: 680px;
+   width: 360px;
+   margin-right: 6px;
+}
+
+.shopia-section-four-content-image-left-one{
+	display: block;
+ 	height: 334px;
+   width: 360px;
+   background-image: url(../img/img4.jpg);
+   background-repeat: no-repeat;
+   background-size: 360px 334px;
+   margin-bottom: 11px;
+}
+
+.shopia-section-four-content-image-left-two{
+	display: block;	
+	height: 334px;
+   width: 360px;
+   background-image: url(../img/img3.jpg);
+   background-repeat: no-repeat;
+   background-size: 360px 334px;
+}
+
+.shopia-section-four-content-image-center{
+	display: inline-block;
+	height: 680px;
+   width: 360px;
+   background-image: url(../img/paris.jpg);
+   background-repeat: no-repeat;
+   background-size: 360px 680px;
+}			
+	
+.shopia-section-four-content-image-right{
+	display: inline-block;
+ 	height: 680px;
+   width: 360px;
+   margin-left: 6px;
+}
+
+.shopia-section-four-content-image-right-one{
+	display: block;	
+	height: 334px;
+   width: 360px;
+   background-image: url(../img/img2.jpg);
+   background-repeat: no-repeat;
+   background-size: 360px 334px;
+   margin-bottom: 11px;
+}
+
+.shopia-section-four-content-image-right-two{
+	display: block;	
+	height: 334px;
+   width: 360px;
+   background-image: url(../img/img1.jpg);
+   background-repeat: no-repeat;
+   background-size: 360px 334px;
+}				
+
+
+/*
+ * ---------------------Section five ---------------------------------
+*/ 		
+
+.shopia-section-five{
+	margin: 0 auto;
+   background-color: rgb(255,255,255);
+   background-size: cover;
+   height: 750px;
+   width: 1240px;
+} 
+
+.shopia-section-five-content{
+	display: block;
+	height: 750px;
+   width: 1104px;
+   margin-left: 68px;
+	margin-right:68px;
+	margin-top: 120px;
+}
+
+.shopia-section-five-content-title_container{
+	display: inline-block;
+	width: 1104px;
+	height: 15px;
+}
+
+.shopia-section-five-content-rectangle_left{ 
+	display: inline-block;
+	background-color: rgb( 234, 234, 234 );
+   width: 330px;
+   height: 2px;
+   margin-bottom: 7px;
+   margin-right: 55px;
+}
+
+.shopia-section-five-content-title{
+	display: inline-block;
+	height: 22px;
+	width: 313px;
+}
+
+.shopia-section-five-content-title-text{
+	display: inline-block;
+	height: 18px;
+	font-family: 'playfairdisplaybolditalic', sans-serif;
+	font-size: 23px;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.shopia-section-five-content-rectangle_right{ 
+	display: inline-block;
+	background-color: rgb( 234, 234, 234 );
+   width: 330px;
+   height: 2px;
+   margin-bottom: 7px;
+   margin-left: 55px;
+}
+
+.shopia-section-five-content-image{
+	display: block;
+	height: 622px;
+   width: 1079px;
+	margin-top: 57px;
+	border-style: solid;
+  	border-width: 1px;
+  	border-color: rgb( 234, 234, 234 );
+  	background-color: rgb( 255, 255, 255 );
+  	padding: 11px;
+}
+
+.shopia-section-five-content-image-ellipse{ 
+	float:left; 
+  border-radius: 50%;
+  background-color: rgb( 254, 171, 18 );
+  width: 49px;
+  height: 49px; 
+  margin-left: 17px;
+  margin-top: 17px;
+}
+
+.shopia-section-five-content-image-ellipse-text{
+  float: left;
+  font-size: 19px;
+  width: 20px;
+  font-family: "Lato", sans-serif;
+  color: rgb( 255, 255, 255 );
+  font-weight: bold;
+  margin-top: 14px;
+  margin-left: 10px;
+}
+
+.shopia-section-five-content-image-ellipse-procent{
+  float: left;
+  font-size: 11px;
+  font-family: "Lato", sans-serif;
+  color: rgb( 255, 255, 255 );
+  font-weight: bold;
+    margin-top: 17px;
+  margin-left: 5px;
+}
+
+.shopia-section-five-content-image-trapeze{
+
+	position: absolute;
+	width: 172px;
+	height: 37px;
+	background-image: url(../img/trapeze.png);
+   background-repeat: no-repeat;
+   background-size: 172px 37px;
+   margin-top: 268.5px;
+   margin-left: 37px;
+}
+
+.shopia-section-five-content-image-trapeze2{
+	position: absolute;
+	width: 172px;
+	height: 37px;
+	background-image: url(../img/trapeze2.png);
+   background-repeat: no-repeat;
+   background-size: 172px 37px;
+   margin-top: 268.5px;
+   margin-left: 37px;
+}
+
+.shopia-section-five-content-image-trapeze-text{
+  font-size: 12px;
+  font-family: "Lato", sans-serif;
+  color: rgb( 255, 255, 255 );
+  font-weight: bold;
+  margin-left: 42px;
+  margin-top: 12px;
+}
+
+.shopia-section-five-content-image-one{
+	display: inline-block;
+ 	height: 622px;
+   width: 258px;
+   margin-right: 15px;
+}
+
+.shopia-section-five-content-image-one-up{
+	display: block;
+ 	height: 305px;
+   width: 258px;
+   background-image: url(../img/collection8.jpg);
+   background-repeat: no-repeat;
+   background-size: 258px 305px;
+   margin-bottom: 11px;
+}
+
+.shopia-section-five-content-image-one-down{
+	display: block;
+ 	height: 305px;
+   width: 258px;
+   background-image: url(../img/collection4.jpg);
+   background-repeat: no-repeat;
+   background-size: 258px 305px;
+}
+
+.shopia-section-five-content-image-two{
+	display: inline-block;
+ 	height: 622px;
+   width: 258px;
+   margin-right: 15px;
+}
+
+.shopia-section-five-content-image-two-up{
+	display: block;
+ 	height: 305px;
+   width: 258px;
+   background-image: url(../img/collection7.jpg);
+   background-repeat: no-repeat;
+	background-size: 258px 305px;
+   margin-bottom: 11px;
+}
+
+.shopia-section-five-content-image-two-down{
+	display: block;
+ 	height: 305px;
+   width: 258px;
+   background-image: url(../img/collection3.jpg);
+   background-repeat: no-repeat;
+	background-size: 258px 305px;
+}
+
+.shopia-section-five-content-image-three{
+	display: inline-block;
+ 	height: 622px;
+   width: 258px;
+   margin-right: 15px;
+}
+
+.shopia-section-five-content-image-three-up{
+	display: block;
+ 	height: 305px;
+   width: 258px;
+   background-image: url(../img/collection6.jpg);
+   background-repeat: no-repeat;
+   background-size: 258px 305px;
+   margin-bottom: 11px;
+}
+
+.shopia-section-five-content-image-three-down{
+	display: block;
+ 	height: 305px;
+   width: 258px;
+   background-image: url(../img/collection2.jpg);
+   background-repeat: no-repeat;
+   background-size: 258px 305px;
+}
+
+.shopia-section-five-content-image-four{
+	display: inline-block;
+ 	height: 622px;
+   width: 258px;
+}
+
+.shopia-section-five-content-image-four-up{
+	display: block;
+ 	height: 305px;
+   width: 258px;
+   background-image: url(../img/collection5.jpg);
+   background-repeat: no-repeat;
+   background-size: 258px 305px;
+   margin-bottom: 11px;
+}
+
+.shopia-section-five-content-image-four-down{
+	display: block;
+ 	height: 305px;
+   width: 258px;
+   background-image: url(../img/collection1.jpg);
+   background-repeat: no-repeat;
+   background-size: 258px 305px;
+}
+
+/*
+ * ---------------------Section six ---------------------------------
+*/ 		
+
+.shopia-section-six{
+	margin: 0 auto;
+   background-color: rgb(255,255,255);
+   background-size: cover;
+   height: 250px;
+   width: 1240px;
+} 
+
+.shopia-section-six-content{
+	display: block;
+	height: 250px;
+   margin-left: 68px;
+	margin-right:68px;
+	margin-top: 95px;
+}
+
+.shopia-section-six-content-title_container{
+	display: inline-block;
+	width: 1104px;
+	height: 15px;
+}
+
+.shopia-section-six-content-rectangle_left{ 
+	display: inline-block;
+	background-color: rgb( 234, 234, 234 );
+   width: 330px;
+   height: 2px;
+   margin-bottom: 7px;
+   margin-right: 55px;
+}
+
+.shopia-section-six-content-title{
+	display: inline-block;
+	height: 22px;
+	width: 323px;
+}
+
+.shopia-section-six-content-title-text{
+	display: inline-block;
+	height: 18px;
+	font-family: 'playfairdisplaybolditalic', sans-serif;
+	font-size: 23px;
+	margin-left: 80px;
+	margin-right: 80px;
+}
+
+.shopia-section-six-content-rectangle_right{ 
+	display: inline-block;
+	background-color: rgb( 234, 234, 234 );
+   width: 330px;
+   height: 2px;
+   margin-bottom: 7px;
+   margin-left: 55px;
+}
+
+.shopia-section-six-content-image{
+	display: block;
+	height: 84px;
+   width: 1030px;
+	margin-top: 105px;
+  	background-color: rgb( 255, 255, 255 );
+  	margin-left: 55px;
+}
+
+.shopia-section-six-content-image-img{
+	display: inline-block;
+	margin-right: 60px;
+	width: 115px;
+	height: 70px;
+}
+
+.shopia-section-six-content-image-img_last{
+	display: inline-block;
+	margin-right: 60px;
+	width: 105px;
+	height: 35px;
+	margin-bottom: 20px;
+}
+
+
+.shopia-section-six-content-image-img_last:last-child{
+	margin-right: 0;
+}
+
+
+/*
+ * ---------------------Section seven ---------------------------------
+*/ 		
+
+.shopia-section-seven{
+	margin: 0 auto;
+   background-color: rgb(255,255,255);
+   background-size: cover;
+   height: 380px;
+   width: 1240px;
+} 
+
+.shopia-section-seven-content-title_container{
+	display: block;
+	height: 380px;
+   width: 1104px;
+   margin-left: 68px;
+	margin-right:68px;
+	margin-top: 75px;
+	height: 15px;
+}
+
+.shopia-section-seven-content-rectangle_left{ 
+	display: inline-block;
+	background-color: rgb( 234, 234, 234 );
+   width: 330px;
+   height: 2px;
+   margin-bottom: 7px;
+   margin-right: 60px;
+}
+
+.shopia-section-seven-content-title{
+	display: inline-block;
+	height: 22px;
+	width: 313px;
+}
+
+.shopia-section-seven-content-title-text{
+	display: inline-block;
+	height: 18px;
+	font-family: 'playfairdisplaybolditalic', sans-serif;
+	font-size: 23px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.shopia-section-seven-content-rectangle_right{ 
+	display: inline-block;
+	background-color: rgb( 234, 234, 234 );
+   width: 330px;
+   height: 2px;
+   margin-bottom: 7px;
+   margin-left: 60px;
+}
+
+.shopia-section-seven-content-imega{
+	display: block;
+ 	height: 336px;
+   width: 1240px;
+   background-image: url(../img/fon.jpg);
+   background-repeat: no-repeat;
+   background-size: 1240px 336px;
+   margin-top: 80px;
+}
+
+.shopia-section-seven-content-imega-content{
+	display: block;
+	margin: 0 auto;
+ 	height: 336px;
+   width: 1075px;
+   margin-left: 86px;
+	margin-top:  34px;
+}
+
+.shopia-section-seven-content-imega-img_g{
+	display: inline-block;
+	width: 202px;
+	height: 268px;
+	margin-top: 37px;
+}
+
+.shopia-section-seven-content-imega-text{
+	display: inline-block;
+   width: 307px;
+}
+
+.shopia-section-seven-content-imega-text-up{
+	position: relative;
+	font-family: 'playfairdisplayitalic', sans-serif;
+	color:  rgb(255,255,255);
+	font-size: 15px;	
+	bottom: 80px;
+}
+
+.shopia-section-seven-content-title-text-center{
+	position: relative;
+	height: 18px;
+	font-family: 'playfairdisplaybolditalic', sans-serif;
+	font-size: 23px;
+	bottom: 40px;
+}
+
+.shopia-section-seven-content-title-text-down{
+  position: relative;
+  font-size: 11px;
+  font-family: "Lato", sans-serif;
+  color: rgb( 127, 126, 126 );
+  font-weight: bold;
+  bottom: 16px;
+}
+
+.shopia-section-seven-content-imega-img_m{
+	float: right;
+	clear:right;	
+	height: 278px;
+	width: 202px;
+	margin-top: 27px;
+}
+
+.shopia-section-seven-content-imega-text2{
+	float: right;
+   width: 307px;
+}
+
+.shopia-section-seven-content-imega-text2-up{
+	position: relative;
+	font-family: 'playfairdisplayitalic', sans-serif;
+	color:  rgb(255,255,255);
+	font-size: 15px;
+	margin-top: 137px;	
+}
+
+.shopia-section-seven-content-title-text2-center{
+	position: relative;
+	height: 18px;
+	font-family: 'playfairdisplaybolditalic', sans-serif;
+	font-size: 23px;
+	margin-top: 40px;
+}
+
+.shopia-section-seven-content-title-text2-down{
+  position: relative;
+  font-size: 11px;
+  font-family: "Lato", sans-serif;
+  color: rgb( 127, 126, 126 );
+  font-weight: bold;
+  margin-top: 23px;
+}
+
+
+/*
+ * ---------------------------------Footer -------------------------------------------------
+*/ 		
+
+.shopia-footer{
+	margin: 0 auto;
+   background-color: rgb( 20, 20, 20 );
+   background-size: cover;
+   height: 550px;
+   width: 1240px;
+}
+
+.shopia-footer-content{
+	margin: 0 auto;
+   height: 550px;
+   width: 1180px;
+   margin-left: 94px;
+   
+}
+
+.shopia-footer-content-up{
+	display: block;
+	height: 210px;
+	margin-top: 50px;
+}
+
+.shopia-footer-content-up-shops{
+	display: inline-block;
+	margin-top: 50px;
+	margin-right: 94px;
+}
+
+.shopia-footer-content-up-shops-title{
+	display: block;
+	font-size: 13px;
+  	font-family: "Lato", sans-serif;
+  	color: rgb( 255, 255, 255 );
+  	font-weight: bold;
+}
+
+.shopia-footer-content-up-shops-text{
+	display: block;
+	font-size: 11px;
+  	font-family: 'LatoRegular', sans-serif;
+  	color: rgb( 106, 106, 106 );
+  	margin-top: 40px;
+  	line-height: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

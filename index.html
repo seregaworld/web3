@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="keywords" content="Shopia, SALE, HandPicked, Summer Collection, Our Brand, Customers Says" /> 
+    	<meta name="description" content="Shopia, new collection by Paris Hilton!" />
+    	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+    	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    	<link rel="stylesheet" type="text/css" href="less/style.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />    <!-- Долой quirks mode -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" /> <!-- Чтобы работали Media Queries запросы -->
+        <script type="text/javascript" src="../app/js/jquery-1.7.2.min.js"></script>
+        <script src="../app/js/menu.js"></script>
+        <script type='text/javascript' src='../app/js/queryLoader.js'></script>
+        <script type='text/javascript' src='../app/js/slider.js'></script>
+        <script type='text/javascript' src='../app/js/pop_up.js'></script>
+        <script type='text/javascript' src='../app/js/json.js'></script>
+        <!-- Angular -->
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+	   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+       <script src="http://angular-ui.github.io/ui-router/build/angular-ui-router.min.js"></script>
+    
+        <script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>  
+        <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+	   <script src="https://cdn.firebase.com/js/simple-login/1.6.2/firebase-simple-login.js"></script>
+       <script>
+        var myapp = angular.module('myapp', ["ui.router", "firebase"]);
+        myapp.controller("mainController", function ($scope, $firebase){
+            $scope.erthomes="homes";
+            $scope.ertlorem="lorem";
+            $scope.ertcategories="categories";
+            function httpGet(url) {
+	               return new Promise(function(resolve, reject) {
+			             var xhr = new XMLHttpRequest();
+    			         xhr.open('GET', url, true);
+
+    			         xhr.onload = function() {
+      				          if (this.status == 200) {
+        				        resolve(xhr.responseText);
+      				          } else {
+        				        var error = new Error(this.statusText);
+        				        error.code = this.status;
+        				        reject(error);
+      				          }
+    			         };
+
+    			         xhr.onerror = function() {
+      				          reject(new Error("Network Error"));
+    			         };
+
+    			         xhr.send();
+  		            });
+
+	           };
+
+            httpGet("./js/shopia-header.json").then(function (result) {
+                    var data=JSON.parse(result);
+                    var ref1 = new Firebase("https://seregaworld-776a8.firebaseio.com/shopia_header");
+                    var fb1 = $firebase(ref1);
+                    var syncObject = fb1.$asObject();
+                    syncObject.$bindTo($scope, 'shopia_header');
+                    fb1.$set({
+                        "shopia_header":data
+                    });
+                    return 'f';
+                });
+            httpGet("./js/shopia-section-one.json").then( function (result) {
+                    var data = JSON.parse(result); 
+                    var ref = new Firebase("https://seregaworld-776a8.firebaseio.com/shopia_section_one");
+                    var fb = $firebase(ref);
+                    var syncObject = fb.$asObject();
+                    syncObject.$bindTo($scope, 'shopia_section_one');
+                    fb.$set({
+                        "shopia_section_one": data
+                      });
+                    return 'f';
+                });
+                
+            httpGet("js/shopia-footer.json").then( function (result) {
+                    var data = JSON.parse(result); 
+                    var ref = new Firebase("https://seregaworld-776a8.firebaseio.com/shopia_footer");
+                    var fb = $firebase(ref);
+                    var syncObject = fb.$asObject();
+                    syncObject.$bindTo($scope, 'shopia_footer');
+                    fb.$set({
+                    "shopia_footer":data
+                      });
+                    return 'f';
+                });
+
+            httpGet("js/preload_and_other.json").then( function (result) {
+                    var data = JSON.parse(result); 
+                    var ref = new Firebase("https://seregaworld-776a8.firebaseio.com/preload_and_other");
+                    var fb = $firebase(ref);
+                    var syncObject = fb.$asObject();
+                    syncObject.$bindTo($scope, 'preload_and_other');
+                    fb.$set({
+                    "preload_and_other":data
+                      });
+                    return 'f';
+                });
+            httpGet("./js/shopia-section-two.json").then( function (result) {
+                   var data = JSON.parse(result); 
+                   var ref = new Firebase("https://seregaworld-776a8.firebaseio.com/shopia_section_two");
+                    var fb = $firebase(ref);
+                    var syncObject = fb.$asObject();
+                    syncObject.$bindTo($scope, 'shopia_section_two');
+                    fb.$set({
+                    "shopia_section_two":data
+                      });
+                    return 'f';
+		      });
+
+              httpGet("./js/shopia-section-three.json").then( function(result) {
+                    var data = JSON.parse(result); 
+                    var ref = new Firebase("https://seregaworld-776a8.firebaseio.com/shopia_section_three");
+                    var fb = $firebase(ref);
+                    var syncObject = fb.$asObject();
+                    syncObject.$bindTo($scope, 'shopia_section_three');
+                    fb.$set({
+                    "shopia_section_three":data
+                      });
+                    return 'f';
+                });
+
+                httpGet("./js/shopia-section-four.json").then( function(result) {
+                        var data = JSON.parse(result); 
+                        var ref = new Firebase("https://seregaworld-776a8.firebaseio.com/shopia_section_four");
+                        var fb = $firebase(ref);
+                        var syncObject = fb.$asObject();
+                        syncObject.$bindTo($scope, 'shopia_section_four');
+                        fb.$set({
+                        "shopia_section_four":data
+                          });
+                        return 'f';
+                    });
+                    httpGet("./js/shopia-section-five.json").then( function(result) {
+                        var data = JSON.parse(result); 
+                        var ref = new Firebase("https://seregaworld-776a8.firebaseio.com/shopia_section_five");
+                        var fb = $firebase(ref);
+                        var syncObject = fb.$asObject();
+                        syncObject.$bindTo($scope, 'shopia_section_five');
+                        fb.$set({
+                        "shopia_section_five":data
+                          });
+                        return 'f';
+                    });
+                    httpGet("./js/categories.json").then( function (result) {
+                        var data = JSON.parse(result); 
+                        var ref = new Firebase("https://seregaworld-776a8.firebaseio.com/categories");
+                        var fb = $firebase(ref);
+                        var syncObject = fb.$asObject();
+                        syncObject.$bindTo($scope, 'categories');
+                        fb.$set({
+                        "categories":data
+                          });
+                        return 'f';
+		              });
+                    httpGet("./js/lorem.json").then( function(result) {
+                        var data = JSON.parse(result); 
+                        var ref = new Firebase("https://seregaworld-776a8.firebaseio.com/lorem");
+                        var fb = $firebase(ref);
+                        var syncObject = fb.$asObject();
+                        syncObject.$bindTo($scope, 'lorem');
+                        fb.$set({
+                            lorem:data
+                          });
+                        return 'f';
+		              });
+                    $scope.selectFunction = function() {
+                    
+                        var ref1 = new Firebase("https://seregaworld-776a8.firebaseio.com/answer");
+                        fb1 = $firebase(ref1);
+                        syncObject = fb1.$asObject();
+                        $scope.articles = fb1.$asArray();
+                        $scope.articles.$loaded().then(function(array) {
+                             $scope.articles.$add({length: array[0].length+1});
+                             console.log(array[1]);
+                            var item=array[0]; $scope.articles.$remove(item).then(function(ref) {
+                                
+                            });
+                            var ref = new Firebase("https://seregaworld-776a8.firebaseio.com/answer/answer"+array[0].length+1);
+                                var fb = $firebase(ref);
+                            syncObject1 = fb.$asObject();
+                            syncObject1.$bindTo($scope, 'answer1');
+                        });
+//                        $scope.erthomes="homes";
+//                        $scope.ertlorem="lorem";
+//                        $scope.ertcategories="categories";
+//                        console.log($scope.ertlorem);
+                    };
+                    
+
+            });
+        myapp.config(function($stateProvider, $urlRouterProvider){
+        // For any unmatched url, send to /route1
+            $urlRouterProvider.otherwise("/auth");
+                $stateProvider.state('homes', {
+                    url: "/homes",
+                    templateUrl:"./html/home.html"
+                    });
+               
+                $stateProvider
+                .state('lorem', {
+                    url: "/lorem",
+                    templateUrl: "./html/lorem.html"
+                })
+                .state('categories', {
+                    url: "/categories",
+                    templateUrl: "./html/categories.html"
+                })
+                .state('auth', {
+                    url: "/auth",
+                    templateUrl: "./html/auth.html"
+                })
+        })
+        /*myapp.controller("mainController", function ($scope, $firebase){
+            var firebaseObj = new Firebase(" https://seregaworld-776a8.firebaseio.com");
+            var sync = $firebase(firebaseObj);
+            $scope.articles = sync.$asArray();
+        })*/
+  </script>
+ <!--   <script type='text/javascript' src='../app/js/firebase_app.js'></script> -->  
+  </head>
+  <body ng-controller="mainController">
+      <div id="page-preloader">
+          <img src="img/w.gif" class="spinner">
+          <div id="please_message">{{ preload_and_other.preload_and_other.please_message }}</div>
+      </div>
+      <header class="shopia-header">
+  			<div class="shopia-header-content">
+                <div  class="shopia-header-img"></div>  
+  				<div id="telephon" class="shopia-header-content-call">{{ shopia_header.shopia_header.telephon }}</div>
+  				<nav class="shopia-header-content-welcome">
+  		            <a ui-sref="homes" id="welcome" class="shopia-header-content-welcome-a">{{ shopia_header.shopia_header.welcome }}</a><!--
+  					--><div id="vert1" class="shopia-header-content-welcome-simbol">{{ shopia_header.shopia_header.vert1 }}</div><!--
+  					--><a id="account" class="shopia-header-content-welcome-a" href="index.html">
+                    {{ shopia_header.shopia_header.account }}</a><!--
+  					--><div id="vert2" class="shopia-header-content-welcome-simbol">{{ shopia_header.shopia_header.vert1 }}</div><!--
+  					--><a id="whistlist" class="shopia-header-content-welcome-a" href="index.html">{{ shopia_header.shopia_header.whistlist }}</a><!--
+  					--><div id="vert3" class="shopia-header-content-welcome-simbol">{{ shopia_header.shopia_header.vert1 }}</div><!--
+  					--><a ui-sref="auth" id="login" class="shopia-header-content-welcome-a">{{ shopia_header.shopia_header.login }}</a>
+  				</nav>
+  			</div>
+  		</header>
+      <section class="shopia-section-one">
+  		    <div class="shopia-section-one-contenet">
+  				<nav class="shopia-section-one-content-home">
+                    <ul class="active">
+  		                <a ui-sref="{{erthomes}}" id="home" class="shopia-section-one-content-home-a">{{ shopia_section_one.shopia_section_one.home }}</a>
+  					     <a ui-sref="{{ertlorem}}" id="gallery" class="shopia-section-one-content-home-a">{{ shopia_section_one.shopia_section_one.gallery }}</a>
+  					     <a ui-sref="{{ertcategories}}" id="categories" class="shopia-section-one-content-home-a">{{ shopia_section_one.shopia_section_one.categories }}</a>	
+  					     <a id="pages" class="shopia-section-one-content-home-a" href="index.html">{{ shopia_section_one.shopia_section_one.pages }}</a>
+                    </ul>
+  				</nav>
+                <a class="toggle-nav" href="#">&#9776;</a>
+                <div class="shopia-section-one-content-img_main"></div> 
+                <div class="shopia-section-one-content-content_interface">
+  		            <select class="shopia-section-one-content-form_currency" name=currency>
+  		                <option id="rupiah" value="RUPIAH" selected>{{ shopia_section_one.shopia_section_one.rupiah }}</option>
+  					    <option id="dollar" value="DOLLAR">{{ shopia_section_one.shopia_section_one.dollar }}</option>
+  		            </select>
+  		            <div class="shopia-section-one-content-img_ellipse"> 
+                        <a id="inst_begin" href="#inst_end"><div class="shopia-section-one-content-img_instag"></div></a> 
+  		            </div>
+  		            <div class="shopia-section-one-content-img_ellipse">
+                        <a id="what_begin" href="#what_end"><div class="shopia-section-one-content-img_what"></div></a>
+  		            </div>
+  		            <div class="shopia-section-one-content-img_ellipse">
+                        <a id="twit_begin" href="#twit_end"><div class="shopia-section-one-content-img_twit"></div></a> 
+  		            </div>
+  		            <div class="shopia-section-one-content-img_ellipse">
+                        <a id="face_begin" href="#face_end"><div class="shopia-section-one-content-img_face"></div></a> 
+  		            </div>
+                </div>
+  		    </div>
+  		</section>
+      <!--<div ng-app="myapp" ng-controller="mainController"><h1>{{ greeting }}</h1></div>-->
+      <section class="shopia-section-two">
+            <div id="slider-wrap">
+	           <div id="s">
+		          <div class="slide"><img class="slide_img" src="img/girls.jpg"></div>
+		          <div class="slide"><img class="slide_img" src="img/girls0.jpg"></div>
+		          <div class="slide"><img class="slide_img" src="img/girls1.jpg"></div>
+		          <div class="slide"><img class="slide_img" src="img/girls4.jpg"></div>
+	           </div>
+            </div>
+  			<div class="shopia-section-two-content">
+  			   <div class="shopia-section-two-content-rectangle_one">
+                   <div class="shopia-section-two-content-rectangle_two">
+                       <div id="mid-season" class="shopia-section-two-content-rectangle-mid">{{ shopia_section_two.shopia_section_two.mid_season }}</div>
+                       <div id="sale" class="shopia-section-two-content-rectangle-sale">{{ shopia_section_two.shopia_section_two.sale }}</div>
+                       <div class="shopia-section-two-content-rectangle-up_to">
+                           <div class="shopia-section-two-content-rectangle-up_to-rectangle_left">
+                               <div class="shopia-section-two-content-rectangle-up_to-rectangle_left-one"></div>
+                               <div class="shopia-section-two-content-rectangle-up_to-rectangle_left-two"></div>
+                           </div><!--
+                           --><div id="up" class="shopia-section-two-content-rectangle-up_to-text">{{ shopia_section_two.shopia_section_two.up }}</div><!--
+                           --><div class="shopia-section-two-content-rectangle-up_to-rectangle-right">
+  				              <div class="shopia-section-two-content-rectangle-up_to-rectangle-right-one"> </div>
+                              <div class="shopia-section-two-content-rectangle-up_to-rectangle-right-two"> </div>
+  		                   </div>
+  		                </div>
+  						<div id="50off" class="shopia-section-two-content-rectangle-off">{{ shopia_section_two.shopia_section_two.50off }}</div>
+  					</div>
+  				</div>
+                <input class="shopia-section-two-content-buttom_shop_now" type="submit"  name="butt_shop_now" value="SHOP NOW">
+  				<div class="shopia-section-two-content-rhomb">
+                    <div id="shopia-section-one-content-rhomb-image1"></div> 
+  					<div id="shopia-section-one-content-rhomb-image2"></div>
+  					<div id="shopia-section-one-content-rhomb-image3"></div> 
+  					<div id="shopia-section-one-content-rhomb-image4"></div> 
+  				</div>
+  			</div>
+  		</section>
+        <div ui-view></div> 
+  		<footer class="shopia-footer">
+  			<div class="shopia-footer-content">
+  				<div class="shopia-footer-content-up">
+  					<div class="shopia-footer-content-up-shops">
+  						<div id="shops" class="shopia-footer-content-up-shops-title">{{ shopia_footer.shopia_footer.shops }}</div>
+  						<div class="shopia-footer-content-up-shops-text">
+  							<a id="newin" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.newin }}</a>
+                            <br><a id="women" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.women }}</a>
+                            <br><a id="men" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.men }}</a>
+                            <br><a id="shoes" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.shoes }}</a>
+                            <br><a id="bags" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.bags }}</a>
+                            <br><a id="topb" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.topb }}</a>	
+                            <br><a id="sale_special" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.sale_special }}</a>
+                            <br><a id="lookbook" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.lookbook }}</a>
+  						</div>
+  					</div>
+  					<div class="shopia-footer-content-up-shops">
+  						<div id="information" class="shopia-footer-content-up-shops-title">{{ shopia_footer.shopia_footer.information }}</div>
+  						<div class="shopia-footer-content-up-shops-text">
+                            <a id="about" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.about }}</a>
+                            <br><a id="customer_service" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.customer_service }}</a>
+                            <br><a id="new_collection" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.new_collection }}</a>
+                            <br><a id="best_sellers" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.best_sellers }}</a>
+                            <br><a id="Manufacturers" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.Manufacturers }}</a>
+                            <br><a id="privacy" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.privacy }}</a>	
+                            <br><a id="terms" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.terms }}</a>
+                            <br><a id="blog" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.blog }}</a>
+  						</div>
+  					</div>
+  					<div class="shopia-footer-content-up-shops">
+  						<div id="customer_s" class="shopia-footer-content-up-shops-title">{{ shopia_footer.shopia_footer.customer_s }}</div>
+  						<div class="shopia-footer-content-up-shops-text">
+                            <a id="serch_terms" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.serch_terms }}</a>
+                            <br><a id="advanced_s" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.advanced_s }}</a>
+                            <br><a id="order_returns" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.order_returns }}</a>
+                            <br><a id="contact_us" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.contact_us }}</a>
+                            <br><a id="rss" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.rss }}</a>
+                            <br><a id="help" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.help }}</a>	
+                            <br><a id="consultant" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.consultant }}</a>
+                            <br><a id="store_location" class="shopia-footer-content-up-shops-text-text_a" href="#welcome">{{ shopia_footer.shopia_footer.store_location }}</a>
+  						</div>
+  					</div>
+  					<div class="shopia-footer-content-up-shops">
+  						<div id="stay_conn" class="shopia-footer-content-up-shops-title">{{ shopia_footer.shopia_footer.stay_conn }}</div>
+  						<div class="shopia-footer-content-up-shops-text">
+                            <div class="shopia-footer-content-up-shops-icons">
+                                <div class="shopia-footer-content-up-shops-icons-img_ellipse">
+                                    <a href="#face_begin"><div id="face_end" class="shopia-footer-content-up-shops-icons-img_ellipse-img_face"></div></a>
+                                </div>
+                                <div class="shopia-footer-content-up-shops-icons-img_ellipse">
+                                    <a href="#twit_begin"><div id="twit_end" class="shopia-footer-content-up-shops-icons-img_ellipse-img_twit"></div></a>
+                                </div>
+                                <div class="shopia-footer-content-up-shops-icons-img_ellipse">
+                                    <a href="#inst_begin"><div id="inst_end" class="shopia-footer-content-up-shops-icons-img_ellipse-img_instag"></div></a>
+                                </div>
+                                <div class="shopia-footer-content-up-shops-icons-img_ellipse">
+                                    <a href="#what_begin"><div id="what_end" class="shopia-footer-content-up-shops-icons-img_ellipse-img_what"></div></a>
+                                </div>
+                                <div class="shopia-footer-content-up-shops-icons-img_ellipse">
+                                    <a href="#what_begin"><div id="what_ends" class="shopia-footer-content-up-shops-icons-img_ellipse-img_wifi"></div></a>
+                                </div>
+                            </div>
+                            <div id="subscribe" class="shopia-footer-content-up-shops-title"></div>
+                            <form class="shopia-footer-content-up-shops-form">
+                                <input class="shopia-footer-content-up-shops-form-email_form" type="email" name=footer_email placeholder="Enter Your Email Address">
+                                <input class="shopia-footer-content-up-shops-form-button_subscribe" type="submit"  name="butt" value="SUBSCRIBE">
+                            </form>
+                            <input class="shopia-footer-content-up-shops-form-button_pop_up" type="submit" iddiv="box_1" value="POP_UP">
+                            <div id="myfond_gris" opendiv="box_1" style="display:none;"></div>
+                            <div id="box_1" class="mymagicoverbox_fenetre" style=" width:320px;">
+                                <div id="box_4" align="center">
+                                {{ preload_and_other.preload_and_other.box_4 }}</div>
+                                <div class="mymagicoverbox_fenetreinterieur">
+                                    <div align="center">
+                                        <fieldset style="padding:0;">
+                                            <div id="label_user"  style="display:block; padding-top: 10px">
+                                                {{ preload_and_other.preload_and_other.label_user }}
+                                            </div><input id="user_name" style="display:block;" type="text" name="username">
+                                            <label id="label_mail" style="display:block; padding-top: 10px">{{ preload_and_other.preload_and_other.label_mail }}</label><input id="mail" style="display:block;" type="text" name="password">
+                                            <label id="label_subject" for="subject"  style="display:block; padding-top: 10px">{{ preload_and_other.preload_and_other.label_subject }}</label>
+                                            <select name="subject" id="subject">
+                                                    <option id="select_message" value="" selected="selected">{{ preload_and_other.preload_and_other.select_message }}</option>
+                                                    <option id="select_error" value="Error!">{{ preload_and_other.preload_and_other.select_error }}</option>
+                                                    <option id="select_wish" value="Пожелание!">{{ preload_and_other.preload_and_other.select_wish }}</option>
+                                                    <option id="select_please" value="Помогите, please">{{ preload_and_other.preload_and_other.select_please }}</option>
+                                                    <option id= "hello" value="Хочу пообщаться...">{{ preload_and_other.preload_and_other.hello }}</option>
+                                            </select>
+                                            <label id="label_message"  for="message" style="display:block; padding-top: 10px">{{ preload_and_other.preload_and_other.label_message }}</label>
+                                            <textarea name="message" id="message" cols="35" rows="5"></textarea>
+                                        </fieldset>
+                                         <div id="mymagicoverbox_pop_id" style="width:100px; margin-bottom: 10px; color:green;" align="center" class="mymagicoverbox_pop">{{ preload_and_other.preload_and_other.mymagicoverbox_pop_id }}</div>
+                                        <div style="width:100px" id="mymagicoverbox_fermer_id" align="center" class="mymagicoverbox_fermer">{{ preload_and_other.preload_and_other.mymagicoverbox_fermer_id }}</div>
+                                    </div>
+                                </div>
+                            </div>             
+  		                </div>
+  					</div>
+  				</div>
+                <img class="shopia-footer-content-line_center_arrow" src="img/end_arrow.png" alt="image.png">
+                 <div class="shopia-footer-content-down-arrow_up">
+                     <a href="#welcome"><div class="shopia-footer-content-down-arrow_up-img"></div></a>
+                </div>
+                <div id="shopia_fashion_store" class="shopia-footer-content-down">{{ shopia_footer.shopia_footer.shopia_fashion_store }}</div>
+                <div class="shopia-footer-content-visa"></div>
+                <div class="shopia-footer-content-mastercard"></div>
+                <div class="shopia-footer-content-am_express"></div>
+                <div class="shopia-footer-content-discover"></div>
+  			</div>
+            <div class="shopia-footer-end"></div>
+  		</footer>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
