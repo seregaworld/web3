@@ -12,5 +12,16 @@
 	"label_message":"Message:",
 	"mymagicoverbox_pop_id":"Send!",
 	"mymagicoverbox_fermer_id":"Close!",
-	"homess": "homes"
+	"homess": "homes",
+	"author": "Авторизация!",
+	"auth_select":"Select!",
+	"auth_welcome":"Авторизован!!!Здравствуйте",
+	"root": "Раздел администратора!",
+	"root_one":"Раздел lorem.html редактирование заголовка",
+	"root_upgrafe":"Upgrade!",
+	"root_two": "Раздел сcategories.html редактирование главного заголовка",
+	"root_three":"Раздел lorem.html редактирование текста",
+	"not_root":"Вы не администратор!",
+	"e_mail":"E-mail",
+	"password":"Password"
 }
