@@ -1,0 +1,21 @@
+<div ng-if="function_flag_root()">
+     <div align="center">{{preload_and_other.preload_and_other.root}}</div>
+     <div>
+         <div align="center">
+             <fieldset style="padding:0;">
+                 <label style="display:block; padding-top: 10px">{{preload_and_other.preload_and_other.root_one}}</label>
+                 <textarea ng-model=massege_title name="title_text_lorem" cols="35" rows="5"></textarea>
+                 <div style="width:100px; margin-bottom: 10px; color:green; cursor: pointer;" align="center" ng-click="updateFunction(massege_title)">{{preload_and_other.preload_and_other.root_upgrafe}}</div>
+                 <label style="display:block; padding-top: 10px">{{preload_and_other.preload_and_other.root_two}}</label>
+                 <textarea ng-model=massege_text name="text_text_lorem" cols="35" rows="5"></textarea>
+                 <div style="width:100px; margin-bottom: 10px; color:green; cursor: pointer;" align="center" ng-click="updateFunction_two(massege_text)">{{preload_and_other.preload_and_other.root_upgrafe}}</div>
+                 <label style="display:block; padding-top: 10px">{{preload_and_other.preload_and_other.root_three}}</label>
+                 <textarea ng-model=massege_text_categ name="title_text_categories" cols="35" rows="5"></textarea>
+                 <div style="width:100px; margin-bottom: 10px; color:green;cursor: pointer;" align="center" ng-click="updateFunction_three(massege_text_categ)">{{preload_and_other.preload_and_other.root_upgrafe}}</div>
+             </fieldset>
+         </div> 
+     </div>
+</div>
+<div ng-if="!function_flag_root()">Вы не администратор!</div>
+
+<div ui-view></div>
