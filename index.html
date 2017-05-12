@@ -23,204 +23,7 @@
         <script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>  
         <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
 	   <script src="https://cdn.firebase.com/js/simple-login/1.6.2/firebase-simple-login.js"></script>
-       <script>
-        var myapp = angular.module('myapp', ["ui.router", "firebase"]);
-        myapp.controller("mainController", function ($scope, $firebase){
-            $scope.erthomes="homes";
-            $scope.ertlorem="lorem";
-            $scope.ertcategories="categories";
-            function httpGet(url) {
-	               return new Promise(function(resolve, reject) {
-			             var xhr = new XMLHttpRequest();
-    			         xhr.open('GET', url, true);
-
-    			         xhr.onload = function() {
-      				          if (this.status == 200) {
-        				        resolve(xhr.responseText);
-      				          } else {
-        				        var error = new Error(this.statusText);
-        				        error.code = this.status;
-        				        reject(error);
-      				          }
-    			         };
-
-    			         xhr.onerror = function() {
-      				          reject(new Error("Network Error"));
-    			         };
-
-    			         xhr.send();
-  		            });
-
-	           };
-
-            httpGet("./js/shopia-header.json").then(function (result) {
-                    var data=JSON.parse(result);
-                    var ref1 = new Firebase("https://seregaworld-776a8.firebaseio.com/shopia_header");
-                    var fb1 = $firebase(ref1);
-                    var syncObject = fb1.$asObject();
-                    syncObject.$bindTo($scope, 'shopia_header');
-                    fb1.$set({
-                        "shopia_header":data
-                    });
-                    return 'f';
-                });
-            httpGet("./js/shopia-section-one.json").then( function (result) {
-                    var data = JSON.parse(result); 
-                    var ref = new Firebase("https://seregaworld-776a8.firebaseio.com/shopia_section_one");
-                    var fb = $firebase(ref);
-                    var syncObject = fb.$asObject();
-                    syncObject.$bindTo($scope, 'shopia_section_one');
-                    fb.$set({
-                        "shopia_section_one": data
-                      });
-                    return 'f';
-                });
-                
-            httpGet("js/shopia-footer.json").then( function (result) {
-                    var data = JSON.parse(result); 
-                    var ref = new Firebase("https://seregaworld-776a8.firebaseio.com/shopia_footer");
-                    var fb = $firebase(ref);
-                    var syncObject = fb.$asObject();
-                    syncObject.$bindTo($scope, 'shopia_footer');
-                    fb.$set({
-                    "shopia_footer":data
-                      });
-                    return 'f';
-                });
-
-            httpGet("js/preload_and_other.json").then( function (result) {
-                    var data = JSON.parse(result); 
-                    var ref = new Firebase("https://seregaworld-776a8.firebaseio.com/preload_and_other");
-                    var fb = $firebase(ref);
-                    var syncObject = fb.$asObject();
-                    syncObject.$bindTo($scope, 'preload_and_other');
-                    fb.$set({
-                    "preload_and_other":data
-                      });
-                    return 'f';
-                });
-            httpGet("./js/shopia-section-two.json").then( function (result) {
-                   var data = JSON.parse(result); 
-                   var ref = new Firebase("https://seregaworld-776a8.firebaseio.com/shopia_section_two");
-                    var fb = $firebase(ref);
-                    var syncObject = fb.$asObject();
-                    syncObject.$bindTo($scope, 'shopia_section_two');
-                    fb.$set({
-                    "shopia_section_two":data
-                      });
-                    return 'f';
-		      });
-
-              httpGet("./js/shopia-section-three.json").then( function(result) {
-                    var data = JSON.parse(result); 
-                    var ref = new Firebase("https://seregaworld-776a8.firebaseio.com/shopia_section_three");
-                    var fb = $firebase(ref);
-                    var syncObject = fb.$asObject();
-                    syncObject.$bindTo($scope, 'shopia_section_three');
-                    fb.$set({
-                    "shopia_section_three":data
-                      });
-                    return 'f';
-                });
-
-                httpGet("./js/shopia-section-four.json").then( function(result) {
-                        var data = JSON.parse(result); 
-                        var ref = new Firebase("https://seregaworld-776a8.firebaseio.com/shopia_section_four");
-                        var fb = $firebase(ref);
-                        var syncObject = fb.$asObject();
-                        syncObject.$bindTo($scope, 'shopia_section_four');
-                        fb.$set({
-                        "shopia_section_four":data
-                          });
-                        return 'f';
-                    });
-                    httpGet("./js/shopia-section-five.json").then( function(result) {
-                        var data = JSON.parse(result); 
-                        var ref = new Firebase("https://seregaworld-776a8.firebaseio.com/shopia_section_five");
-                        var fb = $firebase(ref);
-                        var syncObject = fb.$asObject();
-                        syncObject.$bindTo($scope, 'shopia_section_five');
-                        fb.$set({
-                        "shopia_section_five":data
-                          });
-                        return 'f';
-                    });
-                    httpGet("./js/categories.json").then( function (result) {
-                        var data = JSON.parse(result); 
-                        var ref = new Firebase("https://seregaworld-776a8.firebaseio.com/categories");
-                        var fb = $firebase(ref);
-                        var syncObject = fb.$asObject();
-                        syncObject.$bindTo($scope, 'categories');
-                        fb.$set({
-                        "categories":data
-                          });
-                        return 'f';
-		              });
-                    httpGet("./js/lorem.json").then( function(result) {
-                        var data = JSON.parse(result); 
-                        var ref = new Firebase("https://seregaworld-776a8.firebaseio.com/lorem");
-                        var fb = $firebase(ref);
-                        var syncObject = fb.$asObject();
-                        syncObject.$bindTo($scope, 'lorem');
-                        fb.$set({
-                            lorem:data
-                          });
-                        return 'f';
-		              });
-                    $scope.selectFunction = function() {
-                    
-                        var ref1 = new Firebase("https://seregaworld-776a8.firebaseio.com/answer");
-                        fb1 = $firebase(ref1);
-                        syncObject = fb1.$asObject();
-                        $scope.articles = fb1.$asArray();
-                        $scope.articles.$loaded().then(function(array) {
-                             $scope.articles.$add({length: array[0].length+1});
-                             console.log(array[1]);
-                            var item=array[0]; $scope.articles.$remove(item).then(function(ref) {
-                                
-                            });
-                            var ref = new Firebase("https://seregaworld-776a8.firebaseio.com/answer/answer"+array[0].length+1);
-                                var fb = $firebase(ref);
-                            syncObject1 = fb.$asObject();
-                            syncObject1.$bindTo($scope, 'answer1');
-                        });
-//                        $scope.erthomes="homes";
-//                        $scope.ertlorem="lorem";
-//                        $scope.ertcategories="categories";
-//                        console.log($scope.ertlorem);
-                    };
-                    
-
-            });
-        myapp.config(function($stateProvider, $urlRouterProvider){
-        // For any unmatched url, send to /route1
-            $urlRouterProvider.otherwise("/auth");
-                $stateProvider.state('homes', {
-                    url: "/homes",
-                    templateUrl:"./html/home.html"
-                    });
-               
-                $stateProvider
-                .state('lorem', {
-                    url: "/lorem",
-                    templateUrl: "./html/lorem.html"
-                })
-                .state('categories', {
-                    url: "/categories",
-                    templateUrl: "./html/categories.html"
-                })
-                .state('auth', {
-                    url: "/auth",
-                    templateUrl: "./html/auth.html"
-                })
-        })
-        /*myapp.controller("mainController", function ($scope, $firebase){
-            var firebaseObj = new Firebase(" https://seregaworld-776a8.firebaseio.com");
-            var sync = $firebase(firebaseObj);
-            $scope.articles = sync.$asArray();
-        })*/
-  </script>
- <!--   <script type='text/javascript' src='../app/js/firebase_app.js'></script> -->  
+       <script type='text/javascript' src='../app/js/angular_pract.js'></script> 
   </head>
   <body ng-controller="mainController">
       <div id="page-preloader">
@@ -237,7 +40,8 @@
   					--><a id="account" class="shopia-header-content-welcome-a" href="index.html">
                     {{ shopia_header.shopia_header.account }}</a><!--
   					--><div id="vert2" class="shopia-header-content-welcome-simbol">{{ shopia_header.shopia_header.vert1 }}</div><!--
-  					--><a id="whistlist" class="shopia-header-content-welcome-a" href="index.html">{{ shopia_header.shopia_header.whistlist }}</a><!--
+  					--><a ui-sref="auth" ng-if='!flag_function()' id="whistlist" class="shopia-header-content-welcome-a" href="index.html">{{ shopia_header.shopia_header.whistlist }}</a>
+                    <a ui-sref="root" ng-if='flag_function()' id="whistlist" class="shopia-header-content-welcome-a" href="index.html">{{ shopia_header.shopia_header.whistlist }}</a><!--
   					--><div id="vert3" class="shopia-header-content-welcome-simbol">{{ shopia_header.shopia_header.vert1 }}</div><!--
   					--><a ui-sref="auth" id="login" class="shopia-header-content-welcome-a">{{ shopia_header.shopia_header.login }}</a>
   				</nav>
@@ -247,9 +51,12 @@
   		    <div class="shopia-section-one-contenet">
   				<nav class="shopia-section-one-content-home">
                     <ul class="active">
-  		                <a ui-sref="{{erthomes}}" id="home" class="shopia-section-one-content-home-a">{{ shopia_section_one.shopia_section_one.home }}</a>
-  					     <a ui-sref="{{ertlorem}}" id="gallery" class="shopia-section-one-content-home-a">{{ shopia_section_one.shopia_section_one.gallery }}</a>
-  					     <a ui-sref="{{ertcategories}}" id="categories" class="shopia-section-one-content-home-a">{{ shopia_section_one.shopia_section_one.categories }}</a>	
+  		                <a ui-sref="auth" ng-if='!flag_function()' id="home" class="shopia-section-one-content-home-a">{{ shopia_section_one.shopia_section_one.home }}</a>
+                        <a ui-sref="homes" ng-if='flag_function()' id="home" class="shopia-section-one-content-home-a" >{{ shopia_section_one.shopia_section_one.home }}</a>
+  					     <a ui-sref="auth" ng-if='!flag_function()' id="gallery" class="shopia-section-one-content-home-a">{{ shopia_section_one.shopia_section_one.gallery }}</a>
+                        <a ui-sref="lorem" ng-if='flag_function()' id="gallery" class="shopia-section-one-content-home-a">{{ shopia_section_one.shopia_section_one.gallery }}</a>
+  					     <a ui-sref="auth" ng-if='!flag_function()' id="categories" class="shopia-section-one-content-home-a">{{ shopia_section_one.shopia_section_one.categories }}</a>
+                         <a ui-sref="categories" ng-if='flag_function()' id="categories" class="shopia-section-one-content-home-a">{{ shopia_section_one.shopia_section_one.categories }}</a>
   					     <a id="pages" class="shopia-section-one-content-home-a" href="index.html">{{ shopia_section_one.shopia_section_one.pages }}</a>
                     </ul>
   				</nav>
